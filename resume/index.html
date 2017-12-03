@@ -5,10 +5,10 @@ title: Jolene Poulin's Resume
 
 <script>
   function show(section) {
-    if(document.getElementById('section').style.display == 'none') 
-      document.getElementById('section').style.display = 'block';
+    if(document.getElementById(section).style.display == 'none') 
+      document.getElementById(section).style.display = 'block';
     else
-      document.getElementById('section').style.display = 'none';
+      document.getElementById(section).style.display = 'none';
     
  /*      if(document.getElementById('workex').style.display == 'none') 
       document.getElementById('workex').style.display = 'block';
@@ -51,7 +51,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </p>
 
 <h2><a name="education">Education</a></h2>
-  <a href="javascript:;" onclick="show(edu);">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick="show(document.getElementById("edu"));">Expand/Collapse Section</a>
 
 <div id="edu">
   <dl>
