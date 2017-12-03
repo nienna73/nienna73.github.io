@@ -68,3 +68,7 @@ footer {
 ul.posts li {
   list-style: none;
 }
+
+.expand {
+  display: block;
+}
