@@ -4,7 +4,6 @@ body {
   width: 70%;
 }
 
-
 nav ul, footer ul  {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
   padding: 0px;
@@ -30,7 +29,8 @@ nav ul li, footer ul li {
 }
 
 .top-link {
-  font-size: 10pt;
+  font-size: 4pt;
+  font-color: blue;
 }
 
 
@@ -69,6 +69,3 @@ ul.posts li {
   list-style: none;
 }
 
-.expand {
-  display: block;
-}
