@@ -32,6 +32,10 @@ nav ul li, footer ul li {
   margin-right: 20px;
 }
 
+.top {
+  font-size: 10pt;
+}
+
 
 a {
   text-decoration: none;
