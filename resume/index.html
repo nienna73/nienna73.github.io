@@ -5,10 +5,30 @@ title: Jolene Poulin's Resume
 
 <script>
   function show() {
-    if(document.getElementById('expand').style.display == 'none') 
-      document.getElementById('expand').style.display = 'block';
+    if(document.getElementById('edu').style.display == 'none') 
+      document.getElementById('edu').style.display = 'block';
     else
-      document.getElementById('expand').style.display = 'none';
+      document.getElementById('edu').style.display = 'none';
+    
+       if(document.getElementById('workex').style.display == 'none') 
+      document.getElementById('workex').style.display = 'block';
+    else
+      document.getElementById('workex').style.display = 'none';
+    
+       if(document.getElementById('volex').style.display == 'none') 
+      document.getElementById('volex').style.display = 'block';
+    else
+      document.getElementById('volex').style.display = 'none';
+    
+       if(document.getElementById('ach').style.display == 'none') 
+      document.getElementById('ach').style.display = 'block';
+    else
+      document.getElementById('ach').style.display = 'none';
+    
+       if(document.getElementById('ints').style.display == 'none') 
+      document.getElementById('ints').style.display = 'block';
+    else
+      document.getElementById('ints').style.display = 'none';
       
   }
   
@@ -30,9 +50,10 @@ and speak fluenty in French and I have working understandings of written and spo
 </div>  <!-- close jumpto -->
 </p>
 
-<a href="javascript:;" onclick=show()>+++</a>
-<div id="expand">
 <h2><a name="education">Education</a></h2>
+  <a href="javascript:;" onclick=show()>Expand/Collapse Section</a>
+
+<div id="edu">
   <dl>
   <dt>University of Alberta, 2016-Present</dt>
     <dd>Bachelor of Science with a Specialization in Computing Science</dd>
@@ -110,9 +131,12 @@ and speak fluenty in French and I have working understandings of written and spo
 <p><a href="#top">Back to top</a></p>
 </div>
   
-</div>    <!-- Close the expand div -->
+</div>    <!-- Close the education div -->
 
 <h2><a name="work">Work Experience</a></h2>
+  <a href="javascript:;" onclick=show()>Expand/Collapse Section</a>
+
+<div id="workex">
 <dl>
 <dt>Women in Scholarship, Engineering, Science, and Technology (WISEST) Summer Research Student</dt>
   <dd>July 2015 - August 2015</dd>
@@ -126,8 +150,12 @@ and speak fluenty in French and I have working understandings of written and spo
 <div class="top-link">
 <p><a href="#top">Back to top</a></p>
 </div>
+</div> <!-- close workex div -->
 
     <h2><a name="volunteer">Volunteer Experience</a></h2>
+  <a href="javascript:;" onclick=show()>Expand/Collapse Section</a>
+
+<div id="volex">
 <dl>
   <dt>Undergraduate Association of Computing Science (UACS)</dt>
   <dd>Fall 2016 - Present</dd>
@@ -159,8 +187,12 @@ and speak fluenty in French and I have working understandings of written and spo
 <div class="top-link">
 <p><a href="#top">Back to top</a></p>
 </div>
+</div> <!-- close volex -->
 
 <h2><a name="achievements">Achievements</a></h2>
+  <a href="javascript:;" onclick=show()>Expand/Collapse Section</a>
+
+<div id="ach">
 <ul>
   <li>Priscilla Hammond Memorial Award in Junior English, 2017</li>
   <li>Schulich Leader Nominee, 2016</li>
@@ -178,8 +210,12 @@ and speak fluenty in French and I have working understandings of written and spo
 <div class="top-link">
 <p><a href="#top">Back to top</a></p>
 </div>
+</div> <!-- close ach -->
 
 <h2><a name="interests">Interests and Job Aspirations</a></h2>
+  <a href="javascript:;" onclick=show()>Expand/Collapse Section</a>
+
+<div id="ints">
 <p>My interests as they relate to future career prospects and current ideas on what I would like to work on when I graduate.</p>
 <ul>
   <li>Languages and language learning processes (natural and computer)</li>
@@ -193,4 +229,6 @@ and speak fluenty in French and I have working understandings of written and spo
 <div class="top-link">
 <p><a href="#top">Back to top</a></p>
 </div>
+  
+</div> <!-- close ints -->
 
