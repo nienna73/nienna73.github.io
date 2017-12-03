@@ -4,26 +4,37 @@ title: Jolene Poulin's Resume
 ---
 
 <script>
-  function show(section) {
-    if(document.getElementById(section).style.display == 'none') 
-      document.getElementById(section).style.display = 'block';
+  function showEdu() {
+    if(document.getElementById('edu').style.display == 'none') 
+      document.getElementById('edu').style.display = 'block';
     else
-      document.getElementById(section).style.display = 'none';
+      document.getElementById('edu').style.display = 'none';
+    }
+                              
+                              function showWorkex() {
     
- /*      if(document.getElementById('workex').style.display == 'none') 
+       if(document.getElementById('workex').style.display == 'none') 
       document.getElementById('workex').style.display = 'block';
     else
       document.getElementById('workex').style.display = 'none';
+                              }
+  function showVolex() {
     
        if(document.getElementById('volex').style.display == 'none') 
       document.getElementById('volex').style.display = 'block';
     else
       document.getElementById('volex').style.display = 'none';
+  }
+  
+  function showAch() {
     
        if(document.getElementById('ach').style.display == 'none') 
       document.getElementById('ach').style.display = 'block';
     else
       document.getElementById('ach').style.display = 'none';
+  }
+  
+  function showInts() {
     
        if(document.getElementById('ints').style.display == 'none') 
       document.getElementById('ints').style.display = 'block';
@@ -51,7 +62,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </p>
 
 <h2><a name="education">Education</a></h2>
-  <a href="javascript:;" onclick="show(document.getElementById("edu"));">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick=showEdu()>Expand/Collapse Section</a>
 
 <div id="edu">
   <dl>
@@ -134,7 +145,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </div>    <!-- Close the education div -->
 
 <h2><a name="work">Work Experience</a></h2>
-  <a href="javascript:;" onclick="show(workex);">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick=showWorkex()>Expand/Collapse Section</a>
 
 <div id="workex">
 <dl>
@@ -153,7 +164,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </div> <!-- close workex div -->
 
     <h2><a name="volunteer">Volunteer Experience</a></h2>
-  <a href="javascript:;" onclick="show(volex);">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick=showVolex()>Expand/Collapse Section</a>
 
 <div id="volex">
 <dl>
@@ -190,7 +201,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </div> <!-- close volex -->
 
 <h2><a name="achievements">Achievements</a></h2>
-  <a href="javascript:;" onclick="show(ach);">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick=showAch()>Expand/Collapse Section</a>
 
 <div id="ach">
 <ul>
@@ -213,7 +224,7 @@ and speak fluenty in French and I have working understandings of written and spo
 </div> <!-- close ach -->
 
 <h2><a name="interests">Interests and Job Aspirations</a></h2>
-  <a href="javascript:;" onclick="show(ints);">Expand/Collapse Section</a>
+  <a href="javascript:;" onclick=showInts()>Expand/Collapse Section</a>
 
 <div id="ints">
 <p>My interests as they relate to future career prospects and current ideas on what I would like to work on when I graduate.</p>
