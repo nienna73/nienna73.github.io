@@ -29,8 +29,8 @@ nav ul li, footer ul li {
 }
 
 .top-link {
-  font-size: 4pt;
-  font-color: blue;
+  font-size: 7pt;
+  font-color: #000080;
 }
 
 
@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-color: black;
+  font-color: #000000;
   text-decoration: none;
 }
 
