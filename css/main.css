@@ -13,7 +13,7 @@ nav ul, footer ul  {
 
 nav ul li, footer ul li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .jumpto ul {
@@ -44,7 +44,7 @@ a:hover {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 16pt;
   font-color: black;
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 }
@@ -55,14 +55,14 @@ h2 {
 }
 
 p {
-  font-size: 1.5em;
-  line-height: 1.4em;
+  font-size: 12pt;
+  line-height: 13pt;
   color: #333;
 }
 
 footer {
   border-top: 1px solid #d5d5d5;
-  font-size: 1.5em;
+  font-size: 12pt;
 }
 
 ul.posts li {
