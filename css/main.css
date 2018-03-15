@@ -27,6 +27,10 @@ footer ul li {
   float: clear;
 }
 
+footer ul {
+  float: clear;
+}
+
 .jumpto ul {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
   padding: 0px;
