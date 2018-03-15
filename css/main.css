@@ -1,6 +1,9 @@
-body {
+#container {
   background-image: url(../img/teal.jpg);
   background-repeat: no-repeat;
+}
+
+body {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
   margin: 60px auto;
   width: 70%;
