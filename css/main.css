@@ -23,6 +23,10 @@ nav ul li, footer ul li {
   margin-right: 18px;
 }
 
+footer ul li {
+  float: clear;
+}
+
 .jumpto ul {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
   padding: 0px;
