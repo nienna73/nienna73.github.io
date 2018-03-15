@@ -53,6 +53,10 @@ footer ul {
   padding: 10px 5px 10px 5px;
 }
 
+.clear {
+  float: clear;
+}
+
 
 a {
   text-decoration: none;
