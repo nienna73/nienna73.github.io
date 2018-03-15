@@ -40,6 +40,11 @@ nav ul li, footer ul li {
   font-color: #000080;
 }
 
+.right {
+  float: right;
+  padding: 10px;
+}
+
 
 a {
   text-decoration: none;
