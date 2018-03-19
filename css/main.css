@@ -35,10 +35,6 @@ nav ul li, footer ul li {
   margin-right: 20px;
 }
 
-.top-link {
-  font-size: 4pt;
-  font-color: #000080;
-}
 
 .right {
   float: right;
@@ -83,4 +79,9 @@ footer {
 
 ul.posts li {
   list-style: none;
+}
+
+.top-link {
+  font-size: 4pt;
+  font-color: #000080;
 }
