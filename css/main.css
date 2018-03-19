@@ -35,7 +35,6 @@ nav ul li, footer ul li {
   margin-right: 20px;
 }
 
-
 .right {
   float: right;
   padding: 10px 5px 10px 5px;
@@ -43,6 +42,11 @@ nav ul li, footer ul li {
 
 .clear {
   clear: both;
+}
+
+.top-link {
+  font-size: 4pt;
+  font-color: #000080;
 }
 
 a {
@@ -81,7 +85,3 @@ ul.posts li {
   list-style: none;
 }
 
-.top-link {
-  font-size: 4pt;
-  font-color: #000080;
-}
