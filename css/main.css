@@ -36,7 +36,7 @@ nav ul li, footer ul li {
 }
 
 .top-link {
-  font-size: 7pt;
+  font-size: 4pt;
   font-color: #000080;
 }
 
@@ -48,11 +48,6 @@ nav ul li, footer ul li {
 .clear {
   clear: both;
 }
-
-.totop {
-  font-size: 14pt;
-}
-
 
 a {
   text-decoration: none;
