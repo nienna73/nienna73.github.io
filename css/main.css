@@ -1,4 +1,7 @@
 #container {
+  float: left;
+  position: relative;
+  left: 50%;
   background-color: #FFFFFF;
   padding: 40px 25px 40px 25px;
 }
