@@ -1,7 +1,4 @@
 #container {
-  float: left;
-  position: relative;
-  left: 50%;
   background-color: #FFFFFF;
   padding: 40px 25px 40px 25px;
 }
@@ -47,12 +44,12 @@ nav ul li, footer ul li {
   float: left;
   position: relative;
   left: 50%;
+  padding-right: 80px;
 }
 
 .clear {
   clear: both;
 }
-
 
 
 a {
