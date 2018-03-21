@@ -41,7 +41,9 @@ nav ul li, footer ul li {
 }
 
 .centre {
-  display: inline-block;
+  float: left;
+  position: relative;
+  left: 50%;
 }
 
 .clear {
