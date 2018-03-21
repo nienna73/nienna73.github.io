@@ -97,3 +97,12 @@ ul.posts li {
   list-style: none;
 }
 
+.to-top {
+  font-size: 7pt;
+  font-color: #000080;
+}
+
+.inline-link {
+  font-color: #000080;
+}
+
