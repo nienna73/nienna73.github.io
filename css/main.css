@@ -41,10 +41,9 @@ nav ul li, footer ul li {
 }
 
 .centre {
-  float: left;
-  position: relative;
+  position: fixed;
   left: 50%;
-  padding-right: 160px;
+  padding-right: 80px;
 }
 
 .clear {
