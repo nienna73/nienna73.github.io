@@ -40,6 +40,10 @@ nav ul li, footer ul li {
   padding: 10px 5px 10px 5px;
 }
 
+.centre {
+  float: center;
+}
+
 .clear {
   clear: both;
 }
