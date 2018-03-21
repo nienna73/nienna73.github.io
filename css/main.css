@@ -44,18 +44,24 @@ nav ul li, footer ul li {
   clear: both;
 }
 
-.top-link {
-  font-size: 4pt;
-  font-color: #000080;
-}
+
 
 a {
   text-decoration: none;
   color: #000000;
 }
 
+a dd li{
+  color: #000080;
+}
+
 a:hover {
   text-decoration: underline;
+}
+
+.top-link {
+  font-size: 4pt;
+  font-color: #000080;
 }
 
 h1 {
