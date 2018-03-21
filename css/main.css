@@ -44,7 +44,7 @@ nav ul li, footer ul li {
   position: relative;
   left: 50%;
   /* margin-top: 15px; */
-  padding-right: 300px;
+  margin-right: 300px;
 }
 
 .clear {
