@@ -40,6 +40,10 @@ nav ul li, footer ul li {
   padding: 10px 5px 10px 5px;
 }
 
+.left {
+  float: left;
+}
+
 .centre {
   position: relative;
   left: 50%;
