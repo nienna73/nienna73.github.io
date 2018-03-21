@@ -41,7 +41,7 @@ nav ul li, footer ul li {
 }
 
 .centre {
-  float: center;
+  display: inline-block;
 }
 
 .clear {
