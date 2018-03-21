@@ -63,17 +63,17 @@ a:hover {
 
 .top-link {
   font-size: 4pt;
-  font-color: #000080;
+  color: #000080;
 }
 
 h1 {
   font-size: 16pt;
-  font-color: #000000;
+  color: #000000;
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 h2 {
-  font-color: #000000;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -95,10 +95,10 @@ ul.posts li {
 
 .to-top {
   font-size: 11pt;
-  font-color: #000080;
+  color: #000080;
 }
 
 .inline-link {
-  font-color: #336699;
+ color: #336699;
 }
 
