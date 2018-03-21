@@ -49,6 +49,7 @@ nav ul li, footer ul li {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+  min-width: 160px;
 }
 
 .clear {
