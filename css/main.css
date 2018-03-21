@@ -1,6 +1,7 @@
 #container {
   background-color: #FFFFFF;
   padding: 40px 25px 40px 25px;
+  clear: both;
 }
 
 body {
