@@ -1,7 +1,6 @@
 #container {
   background-color: #FFFFFF;
   padding: 40px 25px 40px 25px;
-  clear: both;
 }
 
 body {
@@ -44,8 +43,8 @@ nav ul li, footer ul li {
 .centre {
   position: fixed;
   left: 50%;
-  padding-right: 160px;
   margin-top: 15px;
+  margin-right: 160px; 
 }
 
 .clear {
