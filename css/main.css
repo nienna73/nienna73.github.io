@@ -52,6 +52,14 @@ nav ul li, footer ul li {
   min-width: 160px;
 }
 
+.centre2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  min-width: 160px;
+}
+
 .clear {
   clear: both;
 }
