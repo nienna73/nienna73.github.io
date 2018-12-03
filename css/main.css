@@ -6,7 +6,7 @@
 body {
   background-image: url(../img/teal.jpg);
   background-repeat: vertical;
-  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  font-family: "Trebuchet MS", 'Helvetica', 'Arial', 'Sans-Serif';
   margin: 60px auto;
   width: 70%;
 }
