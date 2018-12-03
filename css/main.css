@@ -18,9 +18,15 @@ nav ul, footer ul  {
   font-weight: bold;
 }
 
-nav ul li, footer ul li {
+footer ul li {
   display: inline;
   margin-right: 18px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 18px;
+  font-size: 18pt;
 }
 
 .jumpto ul {
