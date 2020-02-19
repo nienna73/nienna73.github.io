@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YEG News Page</title>
+        <meta charset='utf-8' >
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            socket.on('connect', function(data) {
+                console.log('connected');
+            })
+
+            socket.on('allTweet', function(tweet) {
+                console.log(tweet);
+                tweetArray = tweet;
+                loopArray();
+            });
+
+            function loopArray() {
+                if (tweetArray.length > index) {
+                    $(".img-container").removeClass('noimage');
+                    var currentTweet = tweetArray[index];
+                    index++;
+                    $('#user-name').html(currentTweet.userScreenName);
+                    $('#user-description').html(currentTweet.userDescription);
+                    $('#content').html(currentTweet.text);
+                    $('#user-image').attr("src", currentTweet.userImage);
+
+                    if (currentTweet.image) {
+                        $('#image').attr("src", currentTweet.image);
+                    } else {
+                        $(".img-container").addClass('noimage');
+                    }
+                } else {
+                    index = 0;
+                }
+                setTimeout(loopArray, 10000);
+            }
+        </script>
+    </head>
+    <body>
+        <p id="user-name"></p>
+        <p id="user-description"></p>
+        <p id="content"></p>
+        <p id="user-image"></p>
+        <p id="image"></p>
+    </body>
+
+</html>
