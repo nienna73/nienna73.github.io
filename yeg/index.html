@@ -19,7 +19,9 @@
             var app = require('express')();
             var http = require('http').createServer(app);
             var io = require('socket.io')(http);
+
             var T = new twit(config);
+            var tweetArray = [];
 
             socket.on('connect', function(data) {
                 console.log('connected');
@@ -32,7 +34,6 @@
             };
 
             function searchedData(err, data, resp) {
-                var tweetArray = [];
                 for (let index = 0; index < data.statuses.length; index++) {
                     const tweet = data.statuses[index];
                     let tweetbody = {
@@ -46,14 +47,13 @@
                 }
                 io.emit('allTweet', tweetArray);
             }
-        </script>
-        <script>
+
             var socket = io();
             var tweetArray = {};
             var index = 0;
 
             socket.on('allTweet', function(tweet) {
-                tweetArray = tweet;
+                // tweetArray = tweet;
                 loopArray();
             });
 
@@ -67,8 +67,6 @@
                                 + "%2Fstatus%2F" 
                                 + currentTweet.idStr 
                                 + "\"></iframe>"
-
-                    
                     $('#content').html(html);
                 } else {
                     index = 0;
