@@ -5,7 +5,7 @@
         <meta charset='utf-8' >
         <link rel="stylesheet" type="text/css" href="styles.css" >
     </head>
-    <body> 
+    <body onload="runOnLoad()"> 
         <div class="middle">
             <p id="content">Tweet content should load here shortly!</p>
         </div>
@@ -23,10 +23,10 @@
             var T = new twit(config);
             var tweetArray = [];
 
-            socket.on('connect', function(data) {
-                console.log('connected');
-                T.get('search/tweets', params, searchedData);
-            });
+            // socket.on('connect', function(data) {
+            //     console.log('connected');
+                
+            // });
                 
             const params = {
                 q: 'startupedmonton',
@@ -52,10 +52,10 @@
             var tweetArray = {};
             var index = 0;
 
-            socket.on('allTweet', function(tweet) {
-                // tweetArray = tweet;
-                loopArray();
-            });
+            // socket.on('allTweet', function(tweet) {
+            //     // tweetArray = tweet;
+            //     loopArray();
+            // });
 
             function loopArray() {
                 if (tweetArray.length > index) {
@@ -72,6 +72,10 @@
                     index = 0;
                 }
                 setTimeout(loopArray, 10000);
+            }
+            function runOnLoad() {
+                T.get('search/tweets', params, searchedData);
+                loopArray();
             }
         </script>
         
