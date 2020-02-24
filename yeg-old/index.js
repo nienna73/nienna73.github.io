@@ -1,5 +1,6 @@
 const config = require('./config');
 const twit = require('twit');
+const port = process.env.port || 3000;
 
 var app = require('express')();
 var http = require('http').createServer(app);
@@ -10,7 +11,7 @@ app.get('/', function(req, res) {
     T.get('search/tweets', params, searchedData);
 });
 
-http.listen(3000, function() {
+http.listen(port, function() {
     console.log('listening on port 3000');
 })
 
