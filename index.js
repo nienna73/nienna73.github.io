@@ -1,6 +1,7 @@
 const config = require('./config');
 const twit = require('twit');
 const port = process.env.port || 3000;
+const aws = require('aws-sdk');
 
 var app = require('express')();
 var http = require('http').createServer(app);
@@ -15,7 +16,15 @@ http.listen(port, function() {
     console.log('listening on port 3000');
 })
 
-var T = new twit(config);
+
+let conf = {
+    access_token: process.env.access_token,
+    access_token_secret: process.env.access_token_secret,
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_secret
+}
+
+var T = new twit(conf);
 
 const params = {
     q: 'startupedmonton',
