@@ -26,18 +26,10 @@ function searchedData(err, data, resp) {
     for (let index = 0; index < data.statuses.length; index++) {
         const tweet = data.statuses[index];
         let tweetbody = {
-            'text': tweet.text,
             'userScreenName': tweet.user.screen_name,
-            'userImage': tweet.user.profile_image_url_https,
-            'userDescription': tweet.user.description,
             'idStr': tweet.id_str,
         }
 
-        // try {
-        //     if (tweet.entities.media[0].media_url_https) {
-        //         tweetbody['image'] = tweet.entities.media[0].media_url_https;
-        //     }
-        // } catch(e) { }
         tweetArray.push(tweetbody);
     }
     io.emit('allTweet', tweetArray);
