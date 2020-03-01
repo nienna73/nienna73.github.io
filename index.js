@@ -6,10 +6,13 @@ const aws = require('aws-sdk');
 var app = require('express')();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
+var ejs = require('ejs');
+
+
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-    T.get('search/tweets', params, searchedData);
+    var tweets = T.get('search/tweets', params, searchedData);
+    res.render("./dash.ejs", {tweets: tweets});
 });
 
 http.listen(port, function() {
@@ -24,9 +27,7 @@ let conf = {
     consumer_secret: process.env.consumer_secret
 }
 
-console.log(conf);
-
-var T = new twit(conf);
+var T = new twit(config);
 
 const params = {
     q: 'startupedmonton',
@@ -44,7 +45,7 @@ function searchedData(err, data, resp) {
 
         tweetArray.push(tweetbody);
     }
-    io.emit('allTweet', tweetArray);
+    return tweetArray;
 }
 
 
