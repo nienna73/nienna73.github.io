@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 });
 
 http.listen(port, function() {
-    console.log('listening on port 3000');
+    console.log('listening on port ' + port);
 })
 
 
@@ -23,6 +23,8 @@ let conf = {
     consumer_key: process.env.consumer_key,
     consumer_secret: process.env.consumer_secret
 }
+
+console.log(conf);
 
 var T = new twit(conf);
 
