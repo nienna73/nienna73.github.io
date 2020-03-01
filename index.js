@@ -27,7 +27,7 @@ let conf = {
     consumer_secret: process.env.consumer_secret
 }
 
-var T = new twit(config);
+var T = new twit(conf);
 
 const params = {
     q: 'startupedmonton',
