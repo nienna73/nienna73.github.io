@@ -13,6 +13,7 @@
         <% if (tweets) { %>
         <script>
             var tweetArray = '<%- JSON.stringify(tweets) %>';
+            tweetArray = JSON.parse(tweetArray);
             var index = 0;
 
             loopArray();

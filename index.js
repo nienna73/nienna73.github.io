@@ -8,11 +8,15 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var ejs = require('ejs');
 
-
+var tweetArray = [];
 
 app.get('/', function(req, res) {
-    var tweets = T.get('search/tweets', params, searchedData);
-    res.render("./dash.ejs", {tweets: tweets});
+    // res.sendFile(__dirname + '/index.html');
+
+    T.get('search/tweets', params, searchedData);
+    setTimeout(() => {
+    res.render("./dash.ejs", {tweets: tweetArray});
+    }, 10000);
 });
 
 http.listen(port, function() {
@@ -27,7 +31,7 @@ let conf = {
     consumer_secret: process.env.consumer_secret
 }
 
-var T = new twit(conf);
+var T = new twit(config);
 
 const params = {
     q: 'startupedmonton',
@@ -35,7 +39,6 @@ const params = {
 };
 
 function searchedData(err, data, resp) {
-    var tweetArray = [];
     for (let index = 0; index < data.statuses.length; index++) {
         const tweet = data.statuses[index];
         let tweetbody = {
@@ -45,7 +48,6 @@ function searchedData(err, data, resp) {
 
         tweetArray.push(tweetbody);
     }
-    return tweetArray;
 }
 
 
