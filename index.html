@@ -9,45 +9,6 @@
         <div class="middle">
             <p id="content">Tweet content should load here shortly!</p>
         </div>
-        <!-- <script src="/socket.io/socket.io.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
-        <script>
-            var socket = io();
-
-            socket.on('connect', function(data) {
-                console.log('connected');
-            });
-        </script>
-        <script>
-            var socket = io();
-            var tweetArray = {};
-            var index = 0;
-
-            socket.on('allTweet', function(tweet) {
-                tweetArray = tweet;
-                loopArray();
-            });
-
-            function loopArray() {
-                if (tweetArray.length > index) {
-                    var currentTweet = tweetArray[index];
-                    index++;
-
-                    let html = "<iframe border=0 frameborder=0 height=550 src=\"https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2F"
-                                + currentTweet.userScreenName 
-                                + "%2Fstatus%2F" 
-                                + currentTweet.idStr 
-                                + "\"></iframe>"
-
-                    
-                    $('#content').html(html);
-                } else {
-                    index = 0;
-                }
-                setTimeout(loopArray, 10000);
-            }
-        </script>
-         -->
     </body>
 
 </html>
