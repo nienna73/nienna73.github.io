@@ -34,7 +34,7 @@ let conf = {
 var T = new twit(conf);
 
 const params = {
-    q: 'edmonton',
+    q: 'startupedmonton',
     count: 50
 };
 
