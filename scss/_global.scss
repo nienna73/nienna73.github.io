@@ -71,7 +71,8 @@ p.lead {
 }
 
 .dev-icons {
-  font-size: 3rem;
+  font-size: 2em;
+  text-align: center;
   .list-inline-item i {
     &:hover {
       color: $primary;
