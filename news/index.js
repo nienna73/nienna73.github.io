@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('../config');
 const twit = require('twit');
 const port = process.env.PORT || 3000;
 const aws = require('aws-sdk');
