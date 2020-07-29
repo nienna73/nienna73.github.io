@@ -10,14 +10,18 @@ var ejs = require('ejs');
 
 var tweetArray = [];
 
-app.get('/', function(req, res) {
-    // res.sendFile(__dirname + '/index.html');
+console.log("HI, this file is running");
 
-    T.get('search/tweets', params, searchedData);
-    setTimeout(() => {
-    res.render("./dash.ejs", {tweets: tweetArray});
-    }, 10000);
-});
+function didLoad() {
+    app.get('/', function(req, res) {
+        // res.sendFile(__dirname + '/index.html');
+
+        T.get('search/tweets', params, searchedData);
+        setTimeout(() => {
+        res.render("./dash.ejs", {tweets: tweetArray});
+        }, 10000);
+    });
+}
 
 http.listen(port, function() {
     console.log('listening on port ' + port);
