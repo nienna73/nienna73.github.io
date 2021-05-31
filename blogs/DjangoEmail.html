@@ -1,0 +1,85 @@
+<h1 id="how-does-email-work-in-a-django-app">How does email work in a Django app?</h1>
+<p>There are plenty of reasons you might want to send an
+email from your Django application. My scenario looks something like this:</p>
+<p>Users can register with my service and select 1 of 4 levels of access. To
+them, this looks like selecting a role within the service, but to me, it determines
+which features they can see. One user type is basically a power-user: they can
+flat-out change things in the database without anyone checking their work. If
+I don&#39;t do any additional checks, then literally anyone can be a power-user.
+So, I want my Django app to send me an email when a new power-user signs up.
+I then have to go confirm this user&#39;s status and the user is given a lower level
+of access in the meantime.</p>
+<h2 id="what-does-the-email-setup-look-like">What does the email setup look like?</h2>
+<p>Django actually makes it quite simple to send an email.</p>
+<p>In your <code>views.py</code> file, you add <code>from django.core.mail import send_mail</code>.
+The function <code>send_mail</code> takes at least 4 arguments:</p>
+<ul>
+<li>subject</li>
+<li>message</li>
+<li>from_email</li>
+<li>recipient_list</li>
+</ul>
+<p>So a basic call to <code>send_mail</code> would look something like this:</p>
+<pre><code>send_mail(&quot;This is the subject&quot;, &quot;Here is the email content&quot;, &quot;from@me.com&quot;, [&quot;to@you.com&quot;])
+</code></pre>
+<p>This returns an integer representing the number of emails that were successfully sent.</p>
+<p>This function can also take a number of named parameters:</p>
+<ul>
+<li>fail_silently: a boolean value; raises an exception in case of error when its False</li>
+<li>auth_user: the user login if its not already set in <code>settings.py</code></li>
+<li>auth_password: the user password if its not already set in <code>settings.py</code></li>
+<li>connection: email backend</li>
+<li>html_message: if used, the email will be multipart</li>
+</ul>
+<h2 id="but-wait-theres-more">But wait, there&#39;s more...</h2>
+<p>Maybe you&#39;re like me and you&#39;ve set up all the logic for when your email
+needs to be sent and you plop in that bit of code above expecting it to work.
+And then it doesn&#39;t work. And you don&#39;t know why. So you write a blog post about it.</p>
+<h3 id="you-need-to-add-some-settings">You need to add some settings</h3>
+<p>The following values need to be set in <code>settings.py</code> in order for email to work:</p>
+<ul>
+<li>EMAIL_HOST: SMTP server</li>
+<li>EMAIL_HOST_USER: SMTP server login credentials</li>
+<li>EMAIL_HOST_PASSWORD: SMTP server password credentials</li>
+<li>EMAIL_PORT: port of SMTP server</li>
+<li>EMAIL_USE_TLS or EMAIL_USE_SSL: a boolean value to specify the connection security level</li>
+</ul>
+<p>Let&#39;s get one thing out of the way right off the bat: &quot;SMTP&quot; stands for &quot;Simple
+Mail Transfer Protocol&quot; and is one of two main internet protocols used for sending
+email.</p>
+<p><a href="https://www.educba.com/django-mail/">This resource</a> gives a good example of what these values could be set to:</p>
+<pre><code>#---------- EMAIL HANDELING ----------#
+EMAIL_BACKEND = &#39;django.core.mail.backends.smtp.EmailBackend&#39;
+EMAIL_HOST = &#39;smtp.gmail.com&#39;
+EMAIL_PORT = 587
+EMAIL_HOST_USER = &#39;testmysmtpconnection@gmail.com&#39;
+EMAIL_HOST_PASSWORD =  &#39;*********&#39;
+EMAIL_USE_TLS = True
+</code></pre>
+<p>Now onto the confusing parts...</p>
+<h3 id="what-should-i-set-these-values-to">What should <em>I</em> set these values to?</h3>
+<p>The project I&#39;m working on is relatively small. We don&#39;t have our own
+email server or GSuite set up. I can&#39;t just make a <code>noreply@service.ca</code> email
+and plop it into those values. So now what?</p>
+<h4 id="email_backend">EMAIL_BACKEND</h4>
+<p>This variable is just explicitly stating that we&#39;ll be using SMTP as our email
+protocol. You can use the exact value from the example above!</p>
+<h4 id="email_host">EMAIL_HOST</h4>
+<p>This is the SMTP host name that Django is expecting to reach. Examples include
+<code>smtp.gmail.com</code> or <code>smtp.mail.yahoo.com</code>. Check out <a href="https://knowledge.hubspot.com/email-notifications/how-can-i-find-my-email-servers-imap-and-smtp-information">this resource</a>
+for a more detailed guide on how to find your email service&#39;s SMTP host name.</p>
+<h4 id="email_port">EMAIL_PORT</h4>
+<p>This is the port that the email provider uses for SMTP connections. According to
+<a href="https://www.sparkpost.com/blog/what-smtp-port/">this post</a> you can find your
+SMTP host name and port from the support page of your email service.</p>
+<h4 id="email_host_user">EMAIL_HOST_USER</h4>
+<p>This is the username that Django will use to connect to your email service.</p>
+<h4 id="email_host_password">EMAIL_HOST_PASSWORD</h4>
+<p>And this is the password associated with the EMAIL_HOST_USER.</p>
+<h4 id="email_use_tsl">EMAIL_USE_TSL</h4>
+<p>Lastly, you&#39;ll want to set this value to True if you want to use TLS encryption
+on your emails. You could also use <code>EMAIL_USE_SSL</code> or just leave this argument out all
+together.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Now that you have all of this set up, that little chunk of python code above
+should work!</p>

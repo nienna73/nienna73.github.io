@@ -1,0 +1,41 @@
+<h1 id="persephone">Persephone</h1>
+<p>This document serves as an overview of everything I&#39;ve learned about Persephone.</p>
+<h2 id="what-is-persephone">What is Persephone?</h2>
+<p>Persephone is a software package that leverages machine learning to transcribe speech.
+Persephone is especially useful for smaller speech databases and is able to learn 
+on a small dataset.</p>
+<h2 id="why-use-persephone">Why use Persephone?</h2>
+<p>The proposed use for Persephone is to reduce the amount of time linguists need to spend
+transcribing data by training a model to recognize speech. The model can then write transcriptions 
+files on its own with relatively high accuracy. It is able to recognize phonemes and tone independently 
+or together and typically produces results with around a 30% phoneme error rate (PER).</p>
+<h2 id="what-technologies-does-persephone-use">What technologies does Persephone use?</h2>
+<p>Persephone leverages many machine learning technologies to work effectively.</p>
+<h3 id="connectionist-temporal-classification-ctc">Connectionist Temporal Classification (CTC)</h3>
+<p>CTC is a method of traversing a feature vector that follows the least-loss path.
+In  Persephone, the feature vectors are stored in the <code>*.fbank.npy</code> files and can 
+be read using the following python code:</p>
+<pre><code>import numpy as np
+data = np.load(&#39;*.fbank.npy&#39;)
+print(data)
+</code></pre>
+<p>These features represent the most likely phoneme spoken at a given timestep. 
+Phonemes are recorded using a set of characters for the phonemes themselves, 
+and a special character called a &quot;blank&quot;, for example: &#39;-&#39;. Duplicate characters 
+must be separated by a blank character to differentiate between words such as &quot;to&quot;
+and &quot;too&quot;.
+CTC walks through this feature vector and, at each timestep, decides which phoneme 
+was most likely spoken. For a more in depth explanation of CTC, reference 
+<a href="https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c">An Intuitive Explanation of Connectionist Temporal Classification</a></p>
+<h3 id="long-short-term-memory-lstm">Long Short-term Memory (LSTM)</h3>
+<h3 id="recurrent-neural-network-rnn">Recurrent Neural Network (RNN)</h3>
+<h2 id="how-does-it-work">How does it work?</h2>
+<h3 id="how-do-i-train-a-model">How do I train a model?</h3>
+<h3 id="how-do-i-transcribe-untranscribed-data">How do I transcribe untranscribed data?</h3>
+<p>To transcribe an untranscribed file, you need to add the file stem to a file called <code>untranscribed_prefixes.txt</code>. So if I had a file called <code>Session01.wav</code>, I would add <code>Session01</code> on its own line in the file <code>untranscribed_prefixes.txt</code>.</p>
+<h2 id="what-do-the-output-files-mean">What do the output files mean?</h2>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c">An Intuitive Explanation of Connectionist Temporal Classification</a></li>
+<li><a href="https://halshs.archives-ouvertes.fr/halshs-01709648/document">Evaluating phonemic transcription of low-resource tonallanguages for language documentation</a></li>
+</ul>
