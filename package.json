@@ -26,6 +26,6 @@
     "twit": "^2.2.11"
   },
   "devDependencies": {
-    "marked": "^2.0.3"
+    "marked": "^4.0.10"
   }
 }
