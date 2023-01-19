@@ -197,10 +197,16 @@ a:hover, a:focus, a:active {
 }
 
 .space {
-  margin: 5px 3px 5px 3px;
+  margin: 5px 3px 5px 3px !important;
 }
 
 .btn-orng {
   background-color: #DD7D06 !important;
   border-color: #d48a6e !important;
+}
+
+.left {
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
