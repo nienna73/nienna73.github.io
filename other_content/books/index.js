@@ -12,8 +12,10 @@ function loadRead() {
                     "jonny_appleseed.jpg","will_grayson.jpg",
                     "nimona.jpg",];
     for (let book of bookList) {
-        let newHTML = `<div class="card space" style="width: 18rem;">
+        let newHTML = `<div class="col-lg-4 col-md-6 col-sm-6"
+                        <div class="card space" style="width: 18rem;">
                         <img class="card-img-top" src="../img/read/${book}" height="300px" widht="150px" alt="Card image cap">
+                        </div>
                         </div>`
         innerHTML += newHTML;
     }
@@ -28,8 +30,10 @@ function loadReading() {
                     "find_self_kitchen.jpg","selection.jpg",
                     "life_can_be_better.jpg",];
     for (let book of bookList) {
-        let newHTML = `<div class="card space" style="width: 18rem;">
+        let newHTML = `<div class="col-lg-4 col-md-6 col-sm-6"
+                        <div class="card space" style="width: 18rem;">
                         <img class="card-img-top" src="../img/reading/${book}" height="300px" widht="150px" alt="Card image cap">
+                        </div>
                         </div>`
         innerHTML += newHTML;
     }

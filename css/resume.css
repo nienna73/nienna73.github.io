@@ -8,12 +8,13 @@ body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
   color: #868e96;
+  max-width: 80%;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    max-width: 80%;
   }
 }
 
@@ -193,7 +194,7 @@ a:hover, a:focus, a:active {
 }
 
 .middle {
-  margin: auto;
+  margin-left: auto
 }
 
 .space {
@@ -209,4 +210,10 @@ a:hover, a:focus, a:active {
   position: absolute;
   left: 10px;
   top: 10px;
+}
+
+.pink {
+  background-image: url("../other_content/img/background.jpg");
+  background-color: lightpink;
+  margin: auto;
 }

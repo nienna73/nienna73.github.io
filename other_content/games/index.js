@@ -23,8 +23,10 @@ function loadBacklog() {
                     "little_misfortune.jpg","wytchwood.jpg",
                     "lost_in_play.jpg","yonder.jpg",];
     for (let img of imgList) {
-        let newHTML = `<div class="card space" style="width: 18rem;">
+        let newHTML = `<div class="col-lg-4 col-md-6 col-sm-6"
+                        <div class="card space" style="width: 18rem;">
                         <img class="card-img-top" src="../img/backlog/${img}" height="300px" widht="150px" alt="Card image cap">
+                        </div>
                         </div>`
         innerHTML += newHTML;
     }
@@ -37,8 +39,10 @@ function loadPlaying() {
     let imgList = ["beacon_pines.jpg", "disney.jpg",
         "cozy_grove.jpg", "star_wars.jpg"];
     for (let img of imgList) {
-        let newHTML = `<div class="card space" style="width: 18rem;">
+        let newHTML = `<div class="col-lg-4 col-md-6 col-sm-6"
+                        <div class="card space" style="width: 18rem;">
                         <img class="card-img-top" src="../img/playing/${img}" height="300px" widht="150px" alt="Card image cap">
+                        </div>
                         </div>`
         innerHTML += newHTML;
     }
@@ -50,8 +54,10 @@ function loadPlayed() {
     let innerHTML = ``;
     let imgList = ["acnh.jpg", "florence.jpg", "ori.jpg", "wtpwa.jpg"];
     for (let img of imgList) {
-        let newHTML = `<div class="card space" style="width: 18rem;">
+        let newHTML = `<div class="col-lg-4 col-md-6 col-sm-6"
+                        <div class="card space" style="width: 18rem;">
                         <img class="card-img-top" src="../img/played/${img}" height="300px" widht="150px" alt="Card image cap">
+                        </div>
                         </div>`
         innerHTML += newHTML;
     }
