@@ -15,19 +15,19 @@
         "reading": 22
     },
     {
-        "driving": 0,
-        "saving": 0,
-        "tidying": 0,
-        "coding": 0,
-        "games": 0,
-        "planning": 0,
-        "dresses": 0,
-        "gratitude": 0,
-        "writing": 0,
-        "creative projects": 0,
-        "workouts": 0,
+        "driving": 1,
+        "saving": 6,
+        "tidying": 4,
+        "coding": 1,
+        "games": 7,
+        "planning": 21,
+        "dresses": 4,
+        "gratitude": 28,
+        "writing": 2,
+        "creative projects": 2,
+        "workouts": 2,
         "recipes": 0,
-        "reading": 0
+        "reading": 15
     },
     {
         "driving": 0,
