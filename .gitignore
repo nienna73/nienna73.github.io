@@ -6,3 +6,5 @@ yeg-old/config.js
 node_modules/
 config.js
 
+.prettierrc
+settings.json

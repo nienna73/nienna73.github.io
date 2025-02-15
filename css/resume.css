@@ -216,4 +216,9 @@ a:hover, a:focus, a:active {
   background-image: url("../other_content/img/background.jpg");
   background-color: lightpink;
   margin: auto;
+  max-width: min(90vw, 1040px);
+}
+
+.note {
+  font-size: 0.7rem;
 }
