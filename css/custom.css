@@ -1,0 +1,82 @@
+body {
+    --color-primary: #214F17;
+    --color-secondary: #495867;
+    --color-tertiary: #998650;
+    --color-accent: #ff7477;
+    --space-small: 16px;
+    --space-base: 24px;
+    --space-large: 32px;
+
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+    width: 20vw;
+    background-color: var(--color-primary);
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:active {
+    /* todo */
+    color: var(--color-tertiary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-secondary)
+}
+
+#portfolio {
+    margin: var(--space-large);
+}
+
+.workExperienceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.workExperienceTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 8px;
+}
+
+.companyName {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 52px
+    }
+}
