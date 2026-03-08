@@ -48,25 +48,56 @@ h4 {
     color: var(--color-secondary)
 }
 
+ul {
+    max-width: 60vw;
+}
+
+p,
+ul {
+    color: #787778;
+}
+
 #portfolio {
     margin: var(--space-large);
 }
 
-.workExperienceSection {
+#innerExperienceSection,
+#innerProjectsSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-large);
+}
+
+.section {
     display: flex;
     flex-direction: column;
     gap: 0px;
 }
 
-.workExperienceTitle {
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     line-height: 8px;
+
 }
 
-.companyName {
+.subtitle {
     margin: 0;
+    margin-bottom: var(--space-small);
+    line-height: 8px;
+    text-transform: uppercase;
+}
+
+.description {
+    max-width: 60vw;
+}
+
+.divider {
+    border-bottom: 1px solid var(--color-tertiary);
+    height: 0;
+    width: 100%;
+    margin: var(--space-large) 0;
 }
 
 @media (max-width: 992px) {
