@@ -17,12 +17,12 @@ body {
 nav {
     display: flex;
     flex-direction: column;
-    gap: var(--space-small);
+    gap: 0;
     width: 20vw;
     background-color: var(--color-primary);
     align-items: center;
     justify-content: center;
-    padding: auto;
+    text-align: center;
 
     position: sticky;
     top: 0;
@@ -30,15 +30,25 @@ nav {
     height: 100vh;
 }
 
-nav a {
+nav div {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+    width: 80%;
+    padding: 6px;
+    text-align: center;
 }
 
-nav a:active {
-    /* todo */
-    color: var(--color-tertiary);
+nav div:hover {
+    background-color: #3a6d2e;
+    cursor: pointer;
+}
+
+
+#profileImage {
+    border-radius: 50%;
+    border: 6px solid var(--color-tertiary);
+    margin-bottom: var(--space-small);
 }
 
 h1,

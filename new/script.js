@@ -108,6 +108,33 @@ const projects = [
     }
 ]
 
+const navControls = [
+    {
+        buttonId: "goToTop",
+        sectionId: "portfolio"
+    },
+    {
+        buttonId: "goToExperience",
+        sectionId: "experience"
+    },
+    {
+        buttonId: "goToEducation",
+        sectionId: "education"
+    },
+    {
+        buttonId: "goToProjects",
+        sectionId: "projects"
+    },
+    {
+        buttonId: "goToSkills",
+        sectionId: "skills"
+    },
+    {
+        buttonId: "goToPublications",
+        sectionId: "publications"
+    }
+]
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Hi there 👋");
 
@@ -135,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         workExperienceDiv.append(list);
         innerExperienceElement.append(workExperienceDiv);
-    })
+    });
 
     const innerProjectsElement = document.getElementById("innerProjectsSection");
 
@@ -171,5 +198,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         innerProjectsElement.append(projectDiv);
+    });
+
+    navControls.forEach((navButton) => {
+        document
+            .getElementById(navButton.buttonId)
+            .addEventListener("click", function () {
+                const section = document.getElementById(navButton.sectionId);
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
     })
 });
