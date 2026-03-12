@@ -1,0 +1,110 @@
+import './styles.css'
+import experience from "./content/experience.json"
+import projects from "./content/projects.json"
+import { WorkExperience } from './components/WorkExperience'
+import { Project } from './components/Project'
+import { NavBar } from './components/NavBar'
+
+function App() {
+
+  return (
+    <div className='wrapper'>
+      <NavBar />
+      <div id="portfolio" className="portfolio">
+        <h1>Jolene Poulin</h1>
+        <p>tân'si I'm Jolene, a Métis-settler software developer currently located in Burnaby, BC on the unceded
+          ancestral territory of the Hul’qumi’num, Stó:lō, Tsleil-Waututh, and Qayqayt Peoples (<a
+            href="https://www.whose.land/en/" target="_blank">source</a>)</p>
+        <p>I'm currently working at <a href="samdesk.io" target="_blank">samdesk</a> as a Front-End Developer. I enjoy
+          working in roles that have a positive impact on my community. I'm a self-starter, thrive in a hands-on
+          environment, and will always advocate for clear, well-tested code.</p>
+        <a href="https://github.com/nienna73" target="_blank">github</a>
+        <a href="https://www.linkedin.com/in/jolene-poulin/" target="_blank">linkedIn</a>
+
+        <div className="divider"></div>
+
+        <h2 id="experience">Experience</h2>
+        <div className="innerExperienceSection">
+          {experience.map((role) => (
+            <WorkExperience role={role} />
+          ))}
+        </div>
+
+        <div className="divider"></div>
+
+        <h2 id="education">Education</h2>
+        <span className="title">
+          <h3>University of Alberta</h3>
+          <p>September 2016 - December 2020</p>
+        </span>
+        <p className="subtitle">Bachelor of Science with Specialization in Computing Science</p>
+
+        <div className="divider"></div>
+
+        <h2 id="projects">Projects</h2>
+        <div className="innerProjectsSection">
+          {projects.map((project) => <Project project={project} />)}
+        </div>
+
+        <div className="divider"></div>
+
+        <h2 id="skills">Skills</h2>
+        <div className="title">
+          <h3>Technical Languages and Tools</h3>
+        </div>
+        <ul>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Apollo GraphQL</li>
+          <li>Jest</li>
+          <li>React Testing Library</li>
+          <li>Rollbar</li>
+          <li>Material UI</li>
+          <li>Headless UI</li>
+          <li>Storybook</li>
+          <li>Sanity</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Vercel</li>
+          <li>GitHub Actions</li>
+          <li>Python</li>
+        </ul>
+        <div className="title">
+          <h3>Natural Languages</h3>
+        </div>
+        <ul>
+          <li>English - fluent</li>
+          <li>French - proficient</li>
+          <li>German - proficient</li>
+          <li>Spanish - beginner</li>
+          <li>nêhiyawêwin - beginner</li>
+        </ul>
+
+        <div className="divider"></div>
+
+        <h2 id="publications">Publications</h2>
+        <ul>
+          <li>
+            Co-author <a href="https://aclanthology.org/2023.americasnlp-1.15/" target="_blank">Finding words that
+              aren’t there: Using
+              word embeddings to improve dictionary search for low-resource languages</a>, published 2023
+          </li>
+          <li>
+            Co-author <a href="https://aclanthology.org/2023.fieldmatters-1.4/" target="_blank">Speech Database
+              (Speech-DB) – An on-line
+              platform for storing, validating, searching, and recording spoken language data</a>, published 2023
+          </li>
+          <li>
+            Work featured in <a
+              href="https://www.researchgate.net/publication/376656893_Nehiyawi-pikiskwewina_maskwacisihk_Spoken_Dictionary_of_Maskwacis_Cree"
+              target="_blank">nêhiyawi-pîkiskwêwina
+              maskwacîsihk : Spoken Dictionary of Maskwacîs Cree</a>, published 2023
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+export default App
