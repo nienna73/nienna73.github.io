@@ -23,6 +23,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-weight: bolder;
 
     position: sticky;
     top: 0;
@@ -33,7 +34,7 @@ nav {
 nav div {
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    color: var(--color-tertiary);
     width: 80%;
     padding: 6px;
     text-align: center;
@@ -42,6 +43,10 @@ nav div {
 nav div:hover {
     background-color: #3a6d2e;
     cursor: pointer;
+}
+
+.navSelected {
+    color: white;
 }
 
 

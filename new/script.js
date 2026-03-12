@@ -111,7 +111,7 @@ const projects = [
 const navControls = [
     {
         buttonId: "goToTop",
-        sectionId: "portfolio"
+        sectionId: "about"
     },
     {
         buttonId: "goToExperience",
@@ -207,5 +207,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 const section = document.getElementById(navButton.sectionId);
                 section.scrollIntoView({ behavior: "smooth", block: "start" });
             });
+    });
+
+
+    document.addEventListener("scroll", () => {
+        let topElement;
+
+        if (window.pageYOffset > 0) {
+            for (let navElement of navControls) {
+                const section = document.getElementById(navElement.sectionId);
+
+                if (checkVisible(section)) {
+                    topElement = navElement;
+                    break;
+                }
+            }
+        } else {
+            topElement = navControls[0];
+        }
+
+        const currentSelection = document.getElementsByClassName("navSelected")[0];
+        if (currentSelection && currentSelection.id !== topElement.buttonId) {
+            currentSelection.classList.remove("navSelected");
+            document.getElementById(topElement.buttonId).classList.add("navSelected")
+        }
+
+        // todo: special case for when scrolled all the way to bottom
+        // todo: take padding into account?
+
+
     })
 });
+
+// Source - https://stackoverflow.com/a/5354536
+// Posted by Tokimon, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-03-11, License - CC BY-SA 4.0
+
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
