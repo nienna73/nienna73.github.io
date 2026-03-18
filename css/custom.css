@@ -10,7 +10,7 @@ body {
     display: inline-flex;
     flex-direction: row;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -81,6 +81,23 @@ ul {
     display: flex;
     flex-direction: column;
     gap: var(--space-large);
+}
+
+#technicalSkills {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    font-size: 20pt;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: var(--space-large);
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 .section {
