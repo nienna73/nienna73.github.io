@@ -19,6 +19,7 @@ nav {
     flex-direction: column;
     gap: 0;
     width: 20vw;
+    min-width: 180px;
     background-color: var(--color-primary);
     align-items: center;
     justify-content: center;
@@ -133,7 +134,7 @@ ul {
 }
 
 @media (max-width: 992px) {
-    body {
+    /* body {
         flex-direction: column;
     }
 
@@ -141,5 +142,5 @@ ul {
         display: flex;
         flex-direction: row;
         gap: 52px
-    }
+    } */
 }
